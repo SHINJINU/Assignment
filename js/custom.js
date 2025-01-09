@@ -69,3 +69,34 @@ $(function () {
     },
   });
 });
+
+$(function () {
+  $(".main_promotion .control .play").on("click", function () {
+    $(".main_promotion video").trigger("play");
+  });
+  $(".main_promotion .control .pause").on("click", function () {
+    $(".main_promotion video").trigger("pause");
+  });
+});
+
+$(function () {
+  $(".to_top").on("click", function () {
+    $("html, body").animate({ scrollTop: 0 }, 1000);
+  });
+
+  $(window).on("scroll", function () {
+    let sct = $(window).scrollTop();
+    console.log(sct);
+
+    if (sct > 600) {
+      $(".to_top").addClass("on");
+    } else {
+      $(".to_top").removeClass("on");
+    }
+  });
+
+  $("#flk").on("change", function () {
+    let lnk = $(this).val();
+    if (lnk) window.open(lnk);
+  });
+});
