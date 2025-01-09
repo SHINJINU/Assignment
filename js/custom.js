@@ -35,3 +35,37 @@ $(function () {
     },
   });
 });
+
+$(function () {
+  $(".main_content .brand_tab_menu button").on("click", function () {
+    let idx = $(this).parent().index();
+    $(".main_content .brand_tab_menu button").removeClass("on");
+    $(this).addClass("on");
+    $(".main_content .brand_tab_content .con").removeClass("on");
+    $(".main_content .brand_tab_content .con").eq(idx).addClass("on");
+  });
+});
+
+$(function () {
+  $(".main_product .menu_wrap a").on("mouseenter", function () {
+    let idx = $(this).parent().index();
+    $(".main_product .menu_wrap a").removeClass("on");
+    $(this).addClass("on");
+    $(".main_product").css({
+      backgroundImage: `url(./images/main_product0${idx + 1}.jpg)`,
+    });
+  });
+});
+
+$(function () {
+  const MMS = new Swiper(".main_menu_slide", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    speed: 7000,
+    loop: true,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+  });
+});
