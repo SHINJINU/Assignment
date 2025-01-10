@@ -482,6 +482,7 @@
 .main_menu .main_menu_slide .itm p {
   display: block;
   text-align: center;
+  margin-top: 8px;
 }
 
 .main_menu .btn_wrap {
