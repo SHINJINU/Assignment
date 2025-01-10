@@ -80,6 +80,25 @@ $(function () {
 });
 
 $(function () {
+  $("#bgndVideo").YTPlayer({
+    videoURL: "https://youtu.be/_ZHiWbRuzkE",
+    containment: ".main_movie",
+    showControls: false,
+    playOnlyIfVisible: true,
+  });
+
+  $(".main_movie .control .play").on("click", function () {
+    $("#bgndVideo").YTPPlay();
+  });
+  $(".main_movie .control .pause").on("click", function () {
+    $("#bgndVideo").YTPPause();
+  });
+  $(".main_movie .control .fullscreen").on("click", function () {
+    $("#bgndVideo").YTPFullscreen();
+  });
+});
+
+$(function () {
   $(".to_top").on("click", function () {
     $("html, body").animate({ scrollTop: 0 }, 1000);
   });
@@ -98,5 +117,15 @@ $(function () {
   $("#flk").on("change", function () {
     let lnk = $(this).val();
     if (lnk) window.open(lnk);
+  });
+});
+
+$(function () {
+  $(".popup .con .close").on("click", function () {
+    $(".popup").hide();
+  });
+
+  $(".popup #ck").on("change", function () {
+    $(".popup").hide();
   });
 });
