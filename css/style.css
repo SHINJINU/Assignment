@@ -20,7 +20,7 @@
 }
 
 #header .header_wrap h1 img {
-  height: 3.2rem;
+  height: 1.6rem;
 }
 
 #header .gnb {
@@ -237,7 +237,7 @@
   width: 8rem;
   height: 8rem;
 
-  background: rgba(0, 0, 0, 0.4);
+  background: var(--b-color);
 }
 
 .main_visual .arrows button img {
@@ -470,14 +470,6 @@
 
 .main_menu .swiper-wrapper {
   transition-timing-function: linear;
-}
-
-.main_menu .main_menu_slide .itm .img_box {
-  margin-bottom: 2.4rem;
-  background: var(--bg-color);
-  border: 2px solid var(--b-color);
-  border-radius: 8px;
-  overflow: hidden;
 }
 
 .main_menu .main_menu_slide .itm strong {
